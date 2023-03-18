@@ -18,7 +18,7 @@ export default function App() {
   }
 
   return (
-      <SafeAreaView>
+      <SafeAreaView style={{ flex: 1 }}>
         <StatusBar />
 
                   {/* removendo a camada externa do objeto, e passando cada parametro como se fosse um  parametro da cesta */}

@@ -1,16 +1,22 @@
-import { StyleSheet, Image, View } from 'react-native';
+import { StyleSheet, Image, View} from 'react-native';
 import Texto from '../../../components/Texto';
+import Botao from './Botao';
 
-export default function Detalhes({ nome, logoLoja, nomeFazenda, descricao, preco }) {
+export default function Detalhes({ nome, logoFazenda, nomeFazenda, descricao, preco, botao }) {
   return (
       <>
         <Texto style={styles.nome} >{nome}</Texto>
           <View style={styles.containerLogo}>
-            <Image source={logoLoja} style={styles.imglogo}/>
+            <Image source={logoFazenda} style={styles.imglogo}/>
             <Texto style={styles.nomeFazenda}>{nomeFazenda}</Texto>
           </View>
           <Texto style={styles.descricao}>{descricao}</Texto>
           <Texto style={styles.preco}>{preco}</Texto>
+
+          <Botao>
+            {botao}
+          </Botao>
+          
       </>
     )
 }
