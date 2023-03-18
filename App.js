@@ -1,7 +1,6 @@
-import { SafeAreaView, StatusBar } from 'react-native';
+import { SafeAreaView, StatusBar, View } from 'react-native';
 import Cesta from './src/screens/Cesta';
 import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
-import { View } from 'react-native-web';
 
 
 export default function App() {
@@ -14,7 +13,7 @@ export default function App() {
 
   // Enquanto as fontes não forem carregadas, não renderiza o componente, vai aparecer uma tela em branco
   if (!fontCarregada) {
-    return <View />;
+    return <SafeAreaView />;
   }
 
   return (
